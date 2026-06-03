@@ -163,7 +163,7 @@ function App() {
         <section className="section feature-section" id="features">
           <div className="section-heading">
             <p className="eyebrow">Tính năng nổi bật</p>
-            <h2>Giao diện app rõ ràng, thao tác gọn như banking app hiện đại</h2>
+            <h2>Giao diện app rõ ràng, thao tác dễ dàng</h2>
           </div>
           <div className="feature-stack">
             {features.map((feature, index) => (
