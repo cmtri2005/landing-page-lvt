@@ -316,10 +316,13 @@ h3 {
 .promo-panel {
   position: relative;
   display: grid;
+  grid-template-columns: minmax(240px, 0.92fr) minmax(260px, 1fr);
+  gap: 22px;
+  align-items: center;
   width: min(660px, 100%);
   min-height: 430px;
-  place-items: center;
   overflow: hidden;
+  padding: 28px 40px 28px 34px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 30px;
   background:
@@ -339,11 +342,12 @@ h3 {
 }
 
 .promo-copy {
-  position: absolute;
-  top: 62px;
-  right: 42px;
-  z-index: 2;
-  width: min(290px, 42%);
+  position: relative;
+  z-index: 4;
+  grid-column: 2;
+  grid-row: 1;
+  width: min(320px, 100%);
+  justify-self: start;
 }
 
 .promo-copy span {
@@ -363,10 +367,9 @@ h3 {
 .phone {
   position: relative;
   z-index: 1;
-  width: min(290px, 46%);
+  width: min(280px, 100%);
   aspect-ratio: 0.57;
-  margin-right: auto;
-  margin-left: 56px;
+  margin: 0;
   overflow: hidden;
   border: 10px solid var(--purple-950);
   border-radius: 38px;
@@ -376,6 +379,12 @@ h3 {
     radial-gradient(circle at 12% 82%, rgba(17, 199, 160, 0.42), transparent 9rem),
     #f9f2ff;
   box-shadow: 0 34px 90px rgba(28, 8, 70, 0.28);
+}
+
+.promo-panel > .phone {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
 }
 
 .phone.small {
@@ -518,8 +527,8 @@ h3 {
 }
 
 .spark-one {
-  top: 172px;
-  right: 270px;
+  top: 84px;
+  right: 92px;
 }
 
 .spark-two {
@@ -970,20 +979,24 @@ h3 {
   }
 
   .promo-panel {
-    min-height: 520px;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 36px 30px 28px;
   }
 
   .promo-copy {
-    top: 38px;
-    right: 30px;
-    left: 30px;
+    grid-column: 1;
+    grid-row: 1;
     width: auto;
+    justify-self: center;
     text-align: center;
   }
 
   .promo-panel .phone {
+    grid-column: 1;
+    grid-row: 2;
     width: min(280px, 76%);
-    margin: 130px auto 0;
+    margin-top: 24px;
   }
 
   .spark-one {
